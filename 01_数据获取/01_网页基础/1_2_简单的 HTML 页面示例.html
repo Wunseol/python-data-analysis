@@ -1,0 +1,66 @@
+<!-- 这个示例包括了基本的头部信息、导航条、几个内容部分（使用 <section> 标签）、一个简单的联系表单，以及一个页脚。
+    你可以将这段代码复制到一个 .html 文件中，然后用浏览器打开它，看看效果如何。 -->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 设置文档字符编码为UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- 设置文档标题 -->
+    <title>我的第一个网页</title>
+</head>
+<body>
+    <!-- 页面头部信息 -->
+    <header>
+        <!-- 网站欢迎语 -->
+        <h1>欢迎来到我的网站</h1>
+        <!-- 导航条 -->
+        <nav>
+            <!-- 首页链接 -->
+            <a href="#home">首页</a> |
+            <!-- 关于我们链接 -->
+            <a href="#about">关于我们</a> |
+            <!-- 联系我们链接 -->
+            <a href="#contact">联系我们</a>
+        </nav>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 首页内容部分 -->
+        <section id="home">
+            <h2>首页</h2>
+            <p>这里是首页的内容。</p>
+        </section>
+        
+        <!-- 关于我们内容部分 -->
+        <section id="about">
+            <h2>关于我们</h2>
+            <p>这里是关于我们的内容。</p>
+        </section>
+        
+        <!-- 联系我们内容部分 -->
+        <section id="contact">
+            <h2>联系我们</h2>
+            <!-- 联系表单 -->
+            <form action="/submit" method="post">
+                <!-- 姓名输入框 -->
+                <label for="name">姓名:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <!-- 邮箱输入框 -->
+                <label for="email">邮箱:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <!-- 提交按钮 -->
+                <button type="submit">发送</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 页脚信息 -->
+    <footer>
+        <!-- 版权信息 -->
+        <p>&copy; 2024 我的网站. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

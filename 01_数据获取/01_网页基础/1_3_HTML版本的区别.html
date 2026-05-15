@@ -1,0 +1,337 @@
+
+HTML有哪些版本
+
+    HTML 4.01 (1999)
+        HTML 4.0的小幅更新，修复了一些错误。
+        进一步增强了对CSS的支持。
+        是最后一个主要的HTML版本，直到HTML5的出现。
+
+    XHTML 1.1 (2001)
+        XHTML是HTML的一个更严格的版本，遵循XML的规则。
+        要求所有的标签都必须正确闭合和嵌套，提高了文档的可解析性和可维护性。
+        XHTML 1.1 (2001)
+        对XHTML 1.0的进一步优化，强调模块化设计，允许开发者根据需要选择特定的功能模块。
+
+    HTML5 (2014)
+        目前最新和最广泛使用的HTML版本。
+        引入了许多新元素和API，如<canvas>（用于绘图）、<video>和<audio>（用于多媒体）、<article>、<section>、<header>、<footer>等语义化标签。
+        提供了本地存储、表单控件、拖放API等新功能。
+        更好地支持了移动设备和响应式设计。
+
+各个版本简单对比
+
+    HTML4.01 vs. XHTML 1.0
+        HTML4.01允许标签不闭合，例如<br>，而在XHTML 1.0中，所有标签都必须闭合，如<br />。
+        XHTML 1.0更严格地遵循XML的规则，要求所有标签都必须正确嵌套和闭合。
+
+            HTML4.01中，某些标签是可以不闭合的。这些标签通常是“空”标签，即它们没有结束标签。常见的例子包括：
+                <br>：换行标签
+                <hr>：水平线标签
+                <img>：图像标签
+                <input>：表单输入标签
+                在HTML4.01中，这些标签可以写成以下形式：
+
+                html
+                <p>这是一个段落。<br>这是新的一行。</p>
+                <img src="image.jpg" alt="图片描述">
+                <input type="text" name="username">
+
+
+            XHTML 1.0 是一种基于XML的HTML版本，因此它要求所有的标签都必须严格遵循XML的规则。XML是一种非常严格的标记语言，要求所有标签都必须闭合。这意味着：
+                空标签必须闭合：在XHTML 1.0中，空标签必须以斜杠 / 结束，以表示标签的闭合。
+                所有标签必须正确嵌套：在XHTML 1.0中，标签必须正确嵌套，不能交叉嵌套。
+                在XHTML 1.0中，上述标签应该写成以下形式：
+                
+                html
+                <p>这是一个段落。<br />这是新的一行。</p>
+                <img src="image.jpg" alt="图片描述" />
+                <input type="text" name="username" />
+
+            注意两者<br><img><input>的区别即可看出差别
+
+            关键点总结
+                HTML4.01：
+                    允许某些空标签不闭合，例如 <br>、<img>、<input>。
+                    不强制要求所有标签都闭合。
+                XHTML 1.0：
+                    要求所有标签都必须闭合，即使是空标签也需要以 / 结束。
+                    严格要求标签的正确嵌套。
+
+
+    HTML4.01 vs. HTML5
+        HTML5引入了许多新的语义化标签，如<article>、<section>、<header>、<footer>等，使得页面结构更加清晰。
+        HTML5增加了对多媒体的支持，如<video>和<audio>标签，无需依赖Flash等插件。
+        HTML5提供了本地存储功能，如localStorage和sessionStorage，改善了用户体验。
+        HTML5引入了新的表单控件和输入类型，如date、time、email等，提高了表单的可用性和易用性。
+
+        HTML4 和 HTML5 区别，语法、新特性、语义化标签、多媒体支持等方面。以下是一些主要的区别点：
+
+        1. 语法差异
+            HTML4
+                标签闭合：HTML4 允许某些标签不闭合，例如 <br> 和 <img>。
+                大小写敏感：HTML4 对标签和属性的大小写不敏感，可以使用大写、小写或混合大小写。
+                文档类型声明：HTML4 的文档类型声明较为复杂，例如：
+                html
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+            HTML5
+                标签闭合：虽然HTML5仍然允许某些标签不闭合，但为了更好的兼容性和可读性，建议所有标签都闭合，例如 <br> 应该写成 <br> 或 <br/>。
+                大小写敏感：HTML5 推荐使用小写标签和属性，但并不强制。
+                文档类型声明：HTML5 的文档类型声明非常简单，例如：
+                html
+                <!DOCTYPE html>
+        
+        2. 新特性
+            HTML5
+                语义化标签：HTML5 引入了许多新的语义化标签，如 <article>、<section>、<header>、<footer>、<nav>、<aside> 等，这些标签使页面结构更加清晰和有意义。
+                多媒体支持：HTML5 引入了 <video> 和 <audio> 标签，可以直接在网页中嵌入视频和音频，而不需要依赖Flash等插件。
+                表单控件：HTML5 增加了新的表单控件和输入类型，如 date、time、email、url、search、number 等，提高了表单的可用性和易用性。
+                图形和动画：HTML5 引入了 <canvas> 标签，可以用于绘制图形和实现动画。
+                本地存储：HTML5 提供了 localStorage 和 sessionStorage，可以在客户端存储数据，改善了用户体验。
+                拖放API：HTML5 支持拖放操作，使用户可以拖动和放置元素。
+                地理定位：HTML5 提供了地理定位API，可以获取用户的地理位置信息。
+                Web Workers：HTML5 引入了Web Workers，可以在后台线程中运行脚本，提高性能。
+                Web Sockets：HTML5 提供了Web Sockets，实现了全双工通信，适用于实时应用。
+        
+        3. 语义化标签
+            HTML4
+                缺乏语义化标签，通常使用 <div> 和 <span> 来构建页面结构。
+            HTML5
+                引入了多个语义化标签，例如：
+                <article>：独立的文章内容。
+                <section>：页面的一个区域或章节。
+                <header>：页面或区域的头部。
+                <footer>：页面或区域的底部。
+                <nav>：导航链接。
+                <aside>：侧边栏或补充内容。
+                <main>：页面的主要内容。
+
+        4. 多媒体支持
+            HTML4
+                需要依赖Flash或其他插件来播放视频和音频。
+            HTML5
+                直接支持视频和音频，使用 <video> 和 <audio> 标签：
+                html
+                <video src="movie.mp4" controls></video>
+                <audio src="music.mp3" controls></audio>
+
+        5. 表单控件
+            HTML4
+                基本的表单控件，如 <input type="text">、<textarea>、<select> 等。
+            HTML5
+                新增的表单控件和输入类型：
+                html
+                <input type="email" placeholder="请输入邮箱地址">
+                <input type="date" placeholder="请选择日期">
+                <input type="number" min="1" max="100" placeholder="请输入数字">
+                <input type="range" min="1" max="100">
+                <input type="color">
+                <input type="search">
+
+        6. 图形和动画
+            HTML4
+                依赖JavaScript和第三方库（如Flash）来实现复杂的图形和动画。
+            HTML5
+                使用 <canvas> 标签和JavaScript来绘制图形和实现动画：
+                html
+                <canvas id="myCanvas" width="500" height="500"></canvas>
+                <script>
+                    var canvas = document.getElementById('myCanvas');
+                    var ctx = canvas.getContext('2d');
+                    ctx.fillStyle = 'red';
+                    ctx.fillRect(10, 10, 100, 100);
+                </script>
+
+        7. 本地存储
+            HTML4
+                依赖cookies来存储少量数据，存在大小限制和安全问题。
+            HTML5
+                使用 localStorage 和 sessionStorage 来存储数据，容量更大且更安全：
+                html
+                <script>
+                    localStorage.setItem('username', 'JohnDoe');
+                    var username = localStorage.getItem('username');
+                    console.log(username); // 输出: JohnDoe
+                </script>
+
+        8. 拖放API
+            HTML4
+                没有内置的拖放支持，需要使用JavaScript库来实现。
+            HTML5
+                内置拖放支持，可以通过简单的事件处理来实现拖放功能：
+                html
+                <div id="draggable" draggable="true" ondragstart="drag(event)">拖动我</div>
+                <div id="droppable" ondrop="drop(event)" ondragover="allowDrop(event)">放置区</div>
+                <script>
+                    function allowDrop(event) {
+                        event.preventDefault();
+                    }
+                
+                    function drag(event) {
+                        event.dataTransfer.setData("text", event.target.id);
+                    }
+                
+                    function drop(event) {
+                        event.preventDefault();
+                        var data = event.dataTransfer.getData("text");
+                        event.target.appendChild(document.getElementById(data));
+                    }
+                </script>
+        
+        9. 地理定位
+            HTML4
+                没有内置的地理定位支持。
+            HTML5
+                提供了地理定位API，可以获取用户的地理位置信息：
+                html
+                <script>
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                            var latitude = position.coords.latitude;
+                            var longitude = position.coords.longitude;
+                            console.log('纬度: ' + latitude + ', 经度: ' + longitude);
+                        });
+                    } else {
+                        console.log('您的浏览器不支持地理定位。');
+                    }
+                </script>
+
+        10. Web Workers
+            HTML4
+                所有JavaScript代码都在主线程中执行，可能导致页面卡顿。
+            HTML5
+                引入了Web Workers，可以在后台线程中运行脚本，提高性能：
+                html
+                <script>
+                    var worker = new Worker('worker.js');
+                    worker.onmessage = function(event) {
+                        console.log('收到消息: ' + event.data);
+                    };
+                    worker.postMessage('开始工作');
+                </script>
+                在 worker.js 中：
+                javascript
+                self.onmessage = function(event) {
+                    console.log('收到消息: ' + event.data);
+                    self.postMessage('工作完成');
+                };
+
+        11. Web Sockets
+            HTML4
+                依赖HTTP请求进行通信，不适合实时应用。
+            HTML5
+                提供了Web Sockets，实现了全双工通信，适用于实时应用：
+                html
+                <script>
+                    var socket = new WebSocket('ws://example.com/socket');
+                    socket.onopen = function() {
+                        console.log('连接已建立');
+                    };
+                    socket.onmessage = function(event) {
+                        console.log('收到消息: ' + event.data);
+                    };
+                    socket.onclose = function() {
+                        console.log('连接已关闭');
+                    };
+                </script>
+        总结
+        HTML5 相比于 HTML4，在语法、新特性、语义化标签、多媒体支持等方面都有显著的提升和改进。
+        这些变化不仅提高了网页的可读性和可维护性，还为开发者提供了更多的工具和功能，使得现代Web开发变得更加高效和强大。
+
+        
+        
+如何一眼看出html版本?
+
+    查看文档的文档类型声明（DOCTYPE）来确定。不同的HTML版本有不同的DOCTYPE声明方式。以下是一些常见的DOCTYPE声明及其对应的HTML版本：
+
+    HTML4.01
+        HTML4.01 有三种DOCTYPE声明，分别对应严格的、过渡的和框架集的版本：
+
+        Strict：
+        html
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+        Transitional：
+        html
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+        Frameset：
+        html
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+
+    XHTML 1.0
+        XHTML 1.0 也有三种DOCTYPE声明，分别对应严格的、过渡的和框架集的版本：
+
+        Strict：
+        html
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        Transitional：
+
+        html
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+        Frameset：
+        html
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+
+    HTML5
+        HTML5 的DOCTYPE声明非常简单，只有一个版本：
+
+        html
+        <!DOCTYPE html>
+
+
+    示例
+        以下是一些示例，展示了不同版本的HTML文档的DOCTYPE声明：
+
+        HTML4.01 Strict
+            html
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+            <html>
+            <head>
+                <title>HTML4.01 Strict Example</title>
+            </head>
+            <body>
+                <h1>Hello, World!</h1>
+            </body>
+            </html>
+
+        XHTML 1.0 Transitional
+            html
+            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+            <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+                <title>XHTML 1.0 Transitional Example</title>
+            </head>
+            <body>
+                <h1>Hello, World!</h1>
+            </body>
+            </html>
+
+        HTML5
+            html
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>HTML5 Example</title>
+            </head>
+            <body>
+                <h1>Hello, World!</h1>
+            </body>
+            </html>
+
+    小结
+        通过查看文档的DOCTYPE声明，可以快速判断出HTML文档的版本。
+        HTML5的DOCTYPE声明非常简洁
+        而HTML4.01和XHTML 1.0的DOCTYPE声明则较为复杂
+        包含具体的版本信息和URL。
+
+
+
+
+
+
+
+
+
+
